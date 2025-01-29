@@ -2,8 +2,26 @@
 <html>
     <head>
         <script>
-            alert(navigator.language);
-            alert(navigator.languages);
+            var website_language = "";
+            switch(navigator.language) {
+                case "zh":
+                case "zh-CN":
+                    website_language = "zh";
+                case "en":
+                case "en-IE":
+                case "en-AU":
+                case "en-CA":
+                case "en-US":
+                case "en-ZA":
+                case "en-NZ":
+                case "en-IN":
+                case "en-GB-oxendict":
+                case "en-GB":
+                    website_language = "en";
+                default:
+                    website_language = "en";
+            }
+            lacation.href = website_language;
         </script>
     </head>
 </html>
